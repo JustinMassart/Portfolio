@@ -7,8 +7,8 @@
 ## TODO :
 
 - Parcours de l'utilisateur
-- Stratégie
 - Public cible
+- Stratégie
 - Wireframe
 - Design
 - Code
@@ -26,21 +26,20 @@ Le parcours souhaité de l'utilisateur est :
 
 ---
 
-## Stratégie
-
-Le site se constitue uniquement d'une page (Single Page).
-
-TODO
-
-
----
-
 ## Public cible
 
 1. Un particulier quelconque :
     - Pour réaliser un projet visant son entreprise (Réalisation ou modification - d'un site, d'une application).
 2. Une agence de Web :
     - Pour m'embaucher afin de travailler en Front-End.
+
+---
+
+## Stratégie
+
+Le site se constitue uniquement d'une page (Single Page).
+
+TODO
 
 ---
 
