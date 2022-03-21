@@ -36,16 +36,21 @@ Le parcours souhaité de l’utilisateur est de :
     - Pour m’embaucher afin de travailler en Front-End.
 
 - Plus spécifique :
-1. Sur l’utilisateur :
-   - Toutes personnes souhaitant un service dans le Web.
-   - Toutes personnes souhaitant un renseignement dans le Web ou sur moi-même.
-   - Toutes personnes ayant des soucis physiques (Site prévu pour malvoyant, personne n’ayant pas fonction de leurs bras/mains).
-   - Peu importe la tranche d’âge (La seule limite étant de pouvoir réaliser un contract).
-   - Peu import le niveau de l'utilisateur en Web/Informatique/Digital. Le site est prévu pour accompagner toutes personnes souhaitant y aller.
-2. Sur le support :
-   - Le site est fait pour être supporté sur tous les navigateurs encore à jour et sur d'anciennes versions de ces derniers.
-   - Le site est fait pour être supporté en priorité sur les plateformes standards (Grands - moyens - petits écrans, Tablette et Smartphone).
 
+1. Sur les utilisateurs :
+    - Toutes personnes souhaitant un service dans le Web.
+    - Toutes personnes souhaitant un renseignement dans le Web ou sur moi-même.
+    - Toutes personnes ayant des soucis physiques (Site prévu pour malvoyants, personnes n’ayant pas fonction de leurs bras/mains, pas pour les malentendants car le site
+      ne propose pas de contenu audio).
+    - Peu importe la tranche d’âge (La seule limite étant de pouvoir réaliser un contract).
+    - Peu import le niveau de l'utilisateur en Web/Informatique/Digital. Le site est prévu pour accompagner toutes personnes souhaitant y aller.
+2. Sur les supports :
+    - Le site est fait pour être supporté sur tous les navigateurs encore à jour et sur d'anciennes versions de ces derniers.
+    - Le site est fait pour être supporté en priorité sur les plateformes standards (Grands - moyens - petits écrans, Tablettes et Smartphones). Ces plateformes sont
+      celles qui sont souhaitées pour visiter le site. Une adaptation sur des plateformes moins fréquentes (SmartWatch ?, Consoles de jeu (portables), ) peut être
+      envisagée une fois le site fini sur les plateformes standards.
+    - Vivant dans une époque évoluée en technologie, les trop vieux supports (vieux navigateurs, vieux systèmes d'exploitation, etc...) auront une version du site sans
+      trop de contenu dynamique (animations, etc...) pour éviter la surcharge de leur support.
 
 ---
 
@@ -59,10 +64,19 @@ TODO
 
 ## Wireframe
 
+TODO
+
+
 ---
 
 ## Design
 
+TODO
+
+
 ---
 
 ## Code
+
+TODO
+
