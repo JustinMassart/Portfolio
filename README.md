@@ -44,6 +44,7 @@ Le parcours souhaité de l’utilisateur est de :
       ne propose pas de contenu audio).
     - Peu importe la tranche d’âge (La seule limite étant de pouvoir réaliser un contract).
     - Peu import le niveau de l'utilisateur en Web/Informatique/Digital. Le site est prévu pour accompagner toutes personnes souhaitant y aller.
+    - Le site sera peut-être traduit en anglais.
 2. Sur les supports :
     - Le site est fait pour être supporté sur tous les navigateurs encore à jour et sur d'anciennes versions de ces derniers.
     - Le site est fait pour être supporté en priorité sur les plateformes standards (Grands - moyens - petits écrans, Tablettes et Smartphones). Ces plateformes sont
