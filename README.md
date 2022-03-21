@@ -20,8 +20,8 @@
 Le parcours souhaité de l'utilisateur est :
 
 1. Une fois arrivé sur la première section, s'informer sur ma personne (photos, description du parcours scolaire/professionnel).
-2. Se déplacer sur la section contenant les informations de mes compétences (Hard/Soft Skills).
-3. (OPTIONNELLE) - Regarder les différents projets que j'ai réalisés. Il se peut que l'utilisateur ne souhaite pas regarder les projets réalisés.
+2. Regarder les différents projets que j'ai réalisés. Il se peut que l'utilisateur ne souhaite pas regarder les projets réalisés.
+3. (OPTIONNELLE) - Se déplacer sur la section contenant les informations de mes compétences (Hard/Soft Skills).
 4. Se diriger vers la section contenant le formulaire de contact et l'envoyer si on est dans le cas d'un utilisateur qui souhaiterait m'embaucher.
 
 ---
