@@ -6,6 +6,7 @@
 
 ## TODO :
 
+- Parcours de l'utilisateur
 - Stratégie
 - Public cible
 - Wireframe
@@ -14,11 +15,32 @@
 
 ---
 
+## Parcours de l'utilisateur
+
+Le parcours souhaité de l'utilisateur est :
+
+1. Une fois arrivé sur la première section, s'informer sur ma personne (photos, description du parcours scolaire/professionnel).
+2. Se déplacer sur la section contenant les informations de mes compétences (Hard/Soft Skills).
+3. (OPTIONNELLE) - Regarder les différents projets que j'ai réalisés. Il se peut que l'utilisateur ne souhaite pas regarder les projets réalisés.
+4. Se diriger vers la section contenant le formulaire de contact et l'envoyer si on est dans le cas d'un utilisateur qui souhaiterait m'embaucher.
+
+---
+
 ## Stratégie
+
+Le site se constitue uniquement d'une page (Single Page).
+
+TODO
+
 
 ---
 
 ## Public cible
+
+1. Un particulier quelconque :
+    - Pour réaliser un projet visant son entreprise (Réalisation ou modification - d'un site, d'une application).
+2. Une agence de Web :
+    - Pour m'embaucher afin de travailler en Front-End.
 
 ---
 
