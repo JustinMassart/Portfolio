@@ -17,7 +17,7 @@
 
 ## Parcours de l'utilisateur
 
-Le parcours souhaité de l'utilisateur est :
+Le parcours souhaité de l'utilisateur est de :
 
 1. Une fois arrivé sur la première section, s'informer sur ma personne (photos, description du parcours scolaire/professionnel).
 2. Regarder les différents projets que j'ai réalisés. Il se peut que l'utilisateur ne souhaite pas regarder les projets réalisés.
