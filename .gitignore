@@ -1,6 +1,14 @@
 /*
 !.gitignore
 !README.md
+!package.json
+!package-lock.json
+!database.sql
+!webpack.mix.js
 
-/.idea/
-
+!wp-content
+wp-content/*
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/Portfolio
+wp-content/themes/Portfolio/public
