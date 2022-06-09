@@ -62,6 +62,60 @@
 
 	add_action ( 'admin_head', 'fix_svg' );
 
+	// Enregistrer un seul custom post-type pour les projets
+
+	register_post_type ( 'project', [
+		'label' => 'Projets',
+		'labels' => [
+			'name' => 'Projets',
+			'singular_name' => 'Projet',
+		],
+		'description' => 'Tous les projets réalisé par Justin Massart.',
+		'public' => false,
+		'show_ui' => true,
+		'menu_position' => 16,
+		'menu_icon' => 'dashicons-welcome-add-page',
+		'supports' => [ 'title' ],
+	] );
+
+	// Requête Wordpress pour la boucle des projets
+
+	function JMPortfolio_get_projects (): WP_Query
+	{
+		return new WP_Query( [
+			'post_type' => 'project',
+			'orderby' => 'date',
+			'order' => 'DESC'
+		] );
+	}
+
+	// Enregistrer un seul custom post-type pour les codes
+
+	register_post_type ( 'code', [
+		'label' => 'Codes',
+		'labels' => [
+			'name' => 'Codes',
+			'singular_name' => 'Code',
+		],
+		'description' => 'Tous les codes appris par Justin Massart.',
+		'public' => false,
+		'show_ui' => true,
+		'menu_position' => 17,
+		'menu_icon' => 'dashicons-editor-code',
+		'supports' => [ 'title' ],
+	] );
+
+	// Requête Wordpress pour la boucle des codes
+
+	function JMPortfolio_get_codes (): WP_Query
+	{
+		return new WP_Query( [
+			'post_type' => 'code',
+			'orderby' => 'date',
+			'order' => 'ASC'
+		] );
+	}
+
 	// Enregistrer un seul custom post-type pour les messages
 
 	register_post_type ( 'message', [
@@ -73,7 +127,7 @@
 		'description' => 'Les messages envoyés par les utilisateurs via le formulaire de contact.',
 		'public' => false,
 		'show_ui' => true,
-		'menu_position' => 24,
+		'menu_position' => 18,
 		'menu_icon' => 'dashicons-buddicons-pm',
 		'capabilities' => [
 			'create_posts' => false,
@@ -136,27 +190,12 @@
 	] )] function JMPortfolio_sanitize_contact_form_data (): array
 	{
 
-		switch ( $_POST[ 'subject' ] ) {
-			case 'modules' :
-				$about = ' des modules';
-				break;
-			case 'engineer' :
-				$about = ' la section ingénieur';
-				break;
-			case 'issep' :
-				$about = ' l’ISSeP';
-				break;
-			case 'installation' :
-				$about = ' l’achat/l’installation d’un module';
-				break;
-		}
-
 		return [
 			'firstname' => sanitize_text_field ( $_POST[ 'firstname' ] ?? null ),
 			'lastname' => sanitize_text_field ( $_POST[ 'lastname' ] ?? null ),
 			'email' => sanitize_email ( $_POST[ 'email' ] ?? null ),
 			'work' => sanitize_text_field ( $_POST[ 'work' ] ?? null ),
-			'subject' => sanitize_text_field ( $about ?? null ),
+			'subject' => sanitize_text_field ( $_POST[ 'subject' ] ?? null ),
 			'message' => sanitize_text_field ( $_POST[ 'message' ] ?? null ),
 			'rules' => $_POST[ 'rules' ] ?? null
 		];
@@ -164,33 +203,30 @@
 
 	function JMPortfolio_validate_contact_form_data ( $data ): bool|array
 	{
-
-		$_SESSION[ 'errors' ] = [];
+		$errors = [];
 
 		$required = [ 'firstname', 'lastname', 'email', 'message', 'subject' ];
 		$email = [ 'email' ];
 		$accepted = [ 'rules' ];
-		$options = [ 'modules', 'ingénieur', 'hepl', 'issep' ];
-		$select = $_POST[ 'subject' ];
 
 		foreach ( $data as $key => $value ) {
 			if ( in_array ( $key, $required, true ) && !$value ) {
-				$_SESSION[ 'errors' ][ $key ] = true;
+				$errors[ $key ] = 'Ce champs est requis. Merci de le compléter.';
 				continue;
 			}
 
 			if ( in_array ( $key, $email, true ) && !filter_var ( $value, FILTER_VALIDATE_EMAIL ) ) {
-				$_SESSION[ 'errors' ][ $key ] = true;
+				$errors[ $key ] = 'L’email que vous avez rentré ne correspond pas au format normal. Par exemple : example@email.com';
 				continue;
 			}
 
 			if ( in_array ( $key, $accepted, true ) && $value !== '1' ) {
-				$_SESSION[ 'errors' ][ $key ] = true;
+				$errors[ $key ] = 'Merci d’accepter les conditions générales d’utilisation.';
 				continue;
 			}
 		}
 
-		return $_SESSION[ 'errors' ] ? : false;
+		return $errors ? : false;
 	}
 
 	function JMPortfolio_get_contact_field_value ( $field )
@@ -209,6 +245,13 @@
 		}
 
 		return $_SESSION[ 'feedback_contact_form' ][ 'errors' ][ $field ] ?? '';
+	}
+
+	function JMPortfolio_get_errors_style ( $field )
+	{
+		if ( isset( $_SESSION[ 'feedback_contact_form' ][ 'errors' ][ $field ] ) ) {
+			return ' redBorder';
+		}
 	}
 
 // Utilitaire pour charger un fichier compilé par mix, avec cache bursting.

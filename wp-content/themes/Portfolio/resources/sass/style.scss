@@ -3,3 +3,336 @@
 @import url('./reset.scss');
 @import url('./fonts.scss');
 
+// VARIABLES
+
+$manropeR: "Manrope-Regular", sans-serif;
+$manropeM: "Manrope-Medium", sans-serif;
+$butlerR: "Butler-Regular", serif;
+$butlerM: "Butler-Medium", serif;
+
+$blue: #164194;
+$grey: #545454;
+$lightGrey: #F0F0F0;
+
+// CSS
+
+// BODY
+
+.body {
+  max-width: 120em; // 1920px
+  margin: 0 auto;
+  font-family: $manropeM;
+  color: $grey;
+  transition: all .5s, ease-in-out;
+  background: -300px -300px   url('../assets/mountains.svg') no-repeat;
+
+  &__container {
+    max-width: calc(100% - 3.125em); // 50px
+    margin: 0 auto;
+  }
+}
+
+// HEADER
+
+.header {
+  &__burger {
+    display: none;
+  }
+}
+
+// SECTION LANDING
+
+.landing {
+  margin: 0 auto 4.6875em; // 150px 75px
+  padding-top: 150px;
+  font-family: $butlerM;
+  min-width: 300px;
+  max-width: 405px;
+  position: relative;
+
+  .title {
+    color: $blue;
+    font-size: 3em; // 48px
+    padding-bottom: 1.0416em; // 50px
+    margin: 0 auto 0.5208em; // 25px
+    max-width: 225px;
+
+    & span {
+      display: inline-block;
+    }
+
+    &__firstname {
+      padding-bottom: 5px;
+    }
+
+    &__lastname {
+      float: right;
+    }
+  }
+
+  &__desc {
+    font-size: 1.25em; // 60px
+  }
+}
+
+// SECTION QUALITIES
+
+.qualities {
+  font-family: $butlerR;
+  font-size: 2em; // 32px
+  margin: 0 auto 2.34375em; // 75px
+  max-width: 300px;
+
+  &__quality {
+    display: block;
+  }
+
+  &__quality:nth-of-type(2) {
+    font-size: 1.0625em; // 34px
+    font-family: $butlerM;
+    color: $blue;
+    margin-left: 2.2058em; // 75px
+  }
+
+  &__quality:last-of-type {
+    margin-left: 0.78125em; // 25px
+  }
+}
+
+// SECTION SCHOOL
+
+.school {
+  min-width: 300px;
+  max-width: 405px;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 18px;
+    color: black;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 10px solid $lightGrey;
+    border-radius: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__name, &__years {
+    font-family: $butlerR;
+    color: $blue;
+    font-size: 24px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  &__establishment {
+    margin-bottom: 50px;
+  }
+
+  &__establishment, &__study {
+    max-width: 250px;
+  }
+
+  &__study {
+    float: right;
+    margin-bottom: 75px;
+  }
+
+  &__learning {
+    font-family: $manropeR;
+    color: $grey;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+}
+
+// SECTION PROJECTS
+
+.projects {
+  min-width: 300px;
+  max-width: 405px;
+  margin: 0 auto 75px;
+
+  & .project:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+
+  & .project {
+
+    &__imgContainer {
+      max-height: 100%;
+    }
+
+    &__imgContainer img {
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .05);
+
+    }
+
+
+    &__desc {
+      font-family: $butlerM;
+      font-size: 30px;
+      padding: 20px;
+    }
+
+    & span {
+      display: inline-block;
+    }
+
+    &__title {
+      color: $blue;
+      display: inline-block;
+    }
+
+    &__date {
+      color: $grey;
+      float: right;
+    }
+
+  }
+}
+
+// SECTION LANGUAGES
+
+.languages {
+  min-width: 300px;
+  max-width: 405px;
+  margin: 0 auto;
+
+  .code {
+
+    &__title {
+      font-size: 18px;
+      color: black;
+      display: inline-block;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    &__border {
+      max-width: 40px;
+      min-height: 10px;
+      background-color: $lightGrey;
+      border-radius: 1px;
+      margin-bottom: 30px;
+    }
+
+    &__desc {
+      font-size: 18px;
+      font-family: $manropeR;
+
+      strong {
+        color: $blue;
+        font-family: $manropeM;
+      }
+    }
+  }
+
+  .code:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+}
+
+// SECTION CONTACT
+
+.contact {
+  margin-top: 75px;
+
+  &__title {
+    font-family: $butlerM;
+    font-size: 40px;
+    color: $blue;
+
+    span {
+      display: inline-block;
+    }
+
+    .contact__doit {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .form {
+    max-width: 405px;
+    margin: 30px auto 0;
+
+    &__field {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__label {
+      display: none;
+    }
+
+    &__input, &__select {
+      background-color: white;
+      min-height: 50px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, .1);
+      display: block;
+      width: 100%;
+      font-size: 20px;
+      padding-left: 10px;
+      -ms-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: $manropeM;
+    }
+
+    &__textarea {
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 50px;
+      max-height: 1000px;
+    }
+
+    ::placeholder {
+      font-family: $manropeM;
+      font-size: 20px;
+      color: black;
+      vertical-align: middle;
+    }
+
+    & a {
+      text-decoration: underline;
+      color: black;
+    }
+
+    &__button {
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      color: white;
+      font-family: $manropeM;
+      text-transform: uppercase;
+      background-color: $blue;
+      padding: 15px 25px;
+    }
+
+    &__errors {
+      font-size: 20px;
+      line-height: 25px;
+      font-family: $manropeM;
+      color: darkred;
+    }
+
+    & .input {
+
+      &__error {
+        display: inline-block;
+        color: darkred;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

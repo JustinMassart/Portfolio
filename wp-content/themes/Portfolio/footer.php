@@ -1,15 +1,17 @@
 </div>
 <footer class="footer">
 	<h2 class="sro">Pied de page</h2>
-	<nav class="footer__nav fnav">
-		<h3 class="fnav__title sro">Navigation de pied de page</h3>
-		<ul class="fnav__container">
-			<li class="fnav__item">Sur moi</li>
-			<li class="fnav__item">Mes projets</li>
-			<li class="fnav__item">Contact</li>
-			<li class="fnav__item copyright">Copyright <?= date ( "Y" ) ?></li>
+	<div class="footer__socials socials">
+		<ul class="socials__list">
+			<li class="socials__item">Linkedin</li>
+			<li class="socials__item">Github</li>
 		</ul>
-	</nav>
+	</div>
+	<div class="footer__others others">
+		<a href="<?= get_permalink ( JMPortfolio_get_template_page ( 'template-conditions' ) ) ?>">Conditions générales</a>
+		<a href="<?= get_permalink ( JMPortfolio_get_template_page ( 'template-legacy' ) ) ?>">Mentions légales</a>
+	</div>
 </footer>
+<script type="text/javascript" src="<?= JMPortfolio_mix ( '/js/script.js' ) ?>"></script>
 </body>
 </html>

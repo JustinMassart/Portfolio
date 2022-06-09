@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr_BE">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,12 @@
 			<?= get_bloginfo ( 'name' ); ?><?= wp_title ( '•' ); ?>
 		</title>
 		<link rel="stylesheet" type="text/css" href="<?= JMPortfolio_mix ( '/css/style.css' ) ?>"/>
-		<script type="text/javascript" src="<?= JMPortfolio_mix ( '/js/script.js' ) ?>"></script>
 		<?php wp_head (); ?>
 	</head>
 	<body class="body">
 		<div class="body__container">
 			<header class="header">
-				<div class="header__wrapper">
+				<div class="header__container">
 					<h1 class="header__title sro">
 						Justin Massart • WebMaster
 					</h1>
@@ -25,16 +24,11 @@
 								Navigation principale
 							</h2>
 							<ul class="nav__container">
-								<li class="nav__item">Sur moi</li>
-								<li class="nav__item">Mes projets</li>
+								<li class="nav__item">À propos</li>
+								<li class="nav__item">Projects</li>
+								<li class="nav__item">Languages</li>
 								<li class="nav__item">Contact</li>
 							</ul>
-							<div class="nav__cta cta">
-								<a href="<?= get_permalink ( JMPortfolio_get_template_page ( ( 'template-contact' ) ) ) ?>"
-								   class="nav__contact">
-									Contactez moi
-								</a>
-							</div>
 						</nav>
 					</div>
 				</div>
