@@ -9,28 +9,32 @@
 		</p>
 	<?php endif; ?>
 	<div class="form__grid">
-		<div class="form__field name">
+		<div class="form__field name inputs">
 			<label for="firstname" class="form__label">Votre prénom</label>
 			<input type="text" name="firstname" id="firstname" class="form__input input<?= JMPortfolio_get_errors_style ( 'firstname' ) ?>"
 				   value="<?= JMPortfolio_get_contact_field_value ( 'firstname' ) ?>" placeholder="Votre prénom"/>
+			<span class="form__placeholder">Votre prénom</span>
 			<?= JMPortfolio_get_contact_field_error ( 'firstname' ) ?>
 		</div>
-		<div class="form__field lastname">
+		<div class="form__field lastname inputs">
 			<label for="lastname" class="form__label">Votre nom</label>
 			<input type="text" name="lastname" id="lastname" class="form__input input<?= JMPortfolio_get_errors_style ( 'lastname' ) ?>"
 				   value="<?= JMPortfolio_get_contact_field_value ( 'lastname' ) ?>" placeholder="Votre nom"/>
+			<span class="form__placeholder">Votre nom</span>
 			<?= JMPortfolio_get_contact_field_error ( 'lastname' ) ?>
 		</div>
-		<div class="form__field email">
+		<div class="form__field email inputs">
 			<label for="email" class="form__label">Votre adresse e-mail</label>
 			<input type="email" name="email" id="email" class="form__input input<?= JMPortfolio_get_errors_style ( 'email' ) ?>"
 				   value="<?= JMPortfolio_get_contact_field_value ( 'email' ) ?>" placeholder="Votre email"/>
+			<span class="form__placeholder">Votre adresse e-mail</span>
 			<?= JMPortfolio_get_contact_field_error ( 'email' ) ?>
 		</div>
-		<div class="form__field work">
+		<div class="form__field work inputs">
 			<label for="work" class="form__label">Votre profession</label>
 			<input type="text" name="work" id="work" class="form__input input"
 				   value="<?= JMPortfolio_get_contact_field_value ( 'work' ) ?>" placeholder="Votre profession"/>
+			<span class="form__placeholder">Votre profession</span>
 		</div>
 		<div class="form__field subject">
 			<label class="form__label" for="subject">Votre message est à propos de ...</label>
@@ -44,11 +48,12 @@
 			</select>
 			<?= JMPortfolio_get_contact_field_error ( 'subject' ) ?>
 		</div>
-		<div class="form__field message">
+		<div class="form__field message inputs">
 			<label for="message" class="form__label">Votre message</label>
 			<textarea name="message" id="message" cols="30" rows="10"
 					  class="form__input form__textarea input<?= JMPortfolio_get_errors_style ( 'message' ) ?>"
 					  placeholder="Votre message"><?= JMPortfolio_get_contact_field_value ( 'message' ) ?></textarea>
+			<span class="form__placeholder">Votre message</span>
 			<?= JMPortfolio_get_contact_field_error ( 'message' ) ?>
 		</div>
 		<div class="form__field rules">

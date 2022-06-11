@@ -1,0 +1,15 @@
+<svg id="burger" viewBox="0 0 45.47 45.48" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>.b {
+            fill: none;
+            stroke: #164194;
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+            stroke-width: 5px;
+            }
+        </style>
+    </defs>
+    <line class="bottom b" x1="2.61" y1="42.68" x2="42.76" y2="42.68"/>
+    <line class="middle b" x1="2.61" y1="22.81" x2="42.76" y2="22.81"/>
+    <line class="top b" x1="2.61" y1="2.94" x2="42.76" y2="2.94"/>
+</svg>
