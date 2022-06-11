@@ -24,17 +24,17 @@ $lightGrey: #F0F0F0;
   margin: 0 auto;
   font-family: $manropeM;
   color: $grey;
-  transition: all .5s, ease-in-out;
   position: relative;
 
   &__container {
     max-width: calc(100% - 3.125em); // 50px
     margin: 0 auto;
+    overflow: hidden;
   }
 }
 
 .body:before {
-  background: -18.75em 6.25em / 500% url('../assets/mountains.png') no-repeat;
+  background: -18.75em 6.25em / 250% url('../assets/mountains.png') no-repeat;
   content: '';
   display: block;
   position: absolute;
@@ -44,6 +44,10 @@ $lightGrey: #F0F0F0;
   height: 100%;
   z-index: -1;
   opacity: 0.2;
+}
+
+section {
+  max-width: 100%;
 }
 
 // HEADER
@@ -80,27 +84,23 @@ $lightGrey: #F0F0F0;
 .landing {
   margin: 0 auto 4.6875em; // 150px 75px
   font-family: $butlerM;
-  min-width: 18.75em;
-  max-width: 25.3125em;
   position: relative;
 
   .title {
     color: $blue;
     font-size: 3em; // 48px
-    padding-bottom: 1.0416em; // 50px
     margin: 0 auto 0.5208em; // 25px
     max-width: 4.6875em;
 
-    & span {
+    &__firstname {
+      padding-bottom: 0.10416em;
       display: inline-block;
     }
 
-    &__firstname {
-      padding-bottom: 0.10416em;
-    }
-
     &__lastname {
-      float: right;
+      display: flex;
+      justify-content: flex-end;
+
     }
   }
 
@@ -114,18 +114,20 @@ $lightGrey: #F0F0F0;
 .qualities {
   font-family: $butlerR;
   font-size: 2em; // 32px
-  margin: 0 auto 2.34375em; // 75px
-  max-width: 9.375em;
+  display: block;
+  max-width: 850px !important;
+  margin: 0 auto 2.34375em !important; // 75px
 
   &__quality {
-    display: block;
+    display: inline-block;
   }
 
   &__quality:nth-of-type(2) {
     font-size: 1.0625em; // 34px
     font-family: $butlerM;
     color: $blue;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
   }
 
   &__quality:last-of-type {
@@ -136,9 +138,11 @@ $lightGrey: #F0F0F0;
 // SECTION SCHOOL
 
 .school {
-  min-width: 18.75em;
-  max-width: 25.3125em;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 25em;
 
   &__title {
     font-size: 1.215em; // 18px
@@ -165,8 +169,9 @@ $lightGrey: #F0F0F0;
   }
 
   &__study {
-    float: right;
     margin-bottom: 4.6875em;
+    margin-left: 50px;
+
   }
 
   &__learning {
@@ -181,8 +186,6 @@ $lightGrey: #F0F0F0;
 // SECTION PROJECTS
 
 .projects {
-  min-width: 18.75em;
-  max-width: 25.3125em;
   margin: 0 auto 4.6875em;
 
   & .project:not(:last-of-type) {
@@ -192,22 +195,20 @@ $lightGrey: #F0F0F0;
   & .project {
 
     &__imgContainer {
-      max-height: 100%;
+      min-height: 100%;
     }
 
     &__imgContainer img {
       max-width: 100%;
+      min-height: 100%;
       object-fit: contain;
       display: block;
       margin: 0 auto;
-      box-shadow: 0 0.3125em 0.625em rgba(0, 0, 0, .05);
-
     }
 
     &__desc {
       font-family: $butlerM;
       font-size: 1.875em; // 30px
-      padding: 0.666666em;
     }
 
     & span {
@@ -221,7 +222,6 @@ $lightGrey: #F0F0F0;
 
     &__date {
       color: $grey;
-      float: right;
     }
 
   }
@@ -230,12 +230,12 @@ $lightGrey: #F0F0F0;
 // SECTION LANGUAGES
 
 .languages {
-  min-width: 18.75em;
-  max-width: 25.3125em;
   margin: 0 auto;
   position: relative;
 
   .code {
+    max-width: 300px;
+    margin: 0 auto;
 
     &__title {
       font-size: 1.125em; // 18px
@@ -263,27 +263,27 @@ $lightGrey: #F0F0F0;
 }
 
 .languages:before {
-  background: 0 6.25em / 100% 100% url('../assets/mountain-left.png') no-repeat;
+  background: 0 0 / 480px 386px url('../assets/mountain-left.png') no-repeat;
   content: '';
   display: block;
   position: absolute;
   left: 0;
-  top: 0;
-  width: 100%;
-  height: 18.75em;
+  top: 20em;
+  width: 486px;
+  height: 386px;
   z-index: -1;
   opacity: .2;
 }
 
 .languages:after {
-  background: 0 6.25em / 100% 100% url('../assets/mountain-right.png') no-repeat;
+  background: 0 0 / 480px 386px url('../assets/mountain-right.png') no-repeat;
   content: '';
   display: block;
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 18.75em;
+  width: 486px;
+  height: 386px;
   z-index: -1;
   opacity: .2;
 }
@@ -297,9 +297,17 @@ $lightGrey: #F0F0F0;
     font-family: $butlerM;
     font-size: 2.5em; // 40px
     color: $blue;
+    max-width: 400px;
+    margin: 0 auto;
 
     span {
       display: inline-block;
+    }
+
+    span:first-of-type {
+    }
+
+    span:last-of-type {
     }
 
     .contact__doit {
@@ -309,7 +317,7 @@ $lightGrey: #F0F0F0;
   }
 
   .form {
-    max-width: 25.3125em;
+    max-width: 100%;
     margin: 1.875em auto 0;
 
     &__field {
@@ -539,7 +547,125 @@ $lightGrey: #F0F0F0;
   background-color: white;
 }
 
-@media screen and (min-width: 0) and (max-width: 500px) {
+.no-burger {
+  display: none;
+}
+
+@media screen and (min-width: 420px) {
+  .school {
+
+    &__establishment {
+      margin-left: 75px;
+    }
+
+    &__study {
+      margin-left: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 460px) {
+  .qualities {
+
+    &__quality {
+      font-size: 1.5em;
+    }
+
+    &__quality:nth-of-type(1) {
+      margin-left: 0 !important;
+    }
+
+    &__quality:nth-last-of-type(2) {
+      font-size: 1.625em;
+      margin-left: 75px;
+      display: block;
+    }
+
+    &__quality:nth-of-type(3) {
+      margin-left: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .landing {
+
+    h2.title {
+      font-size: 4em;
+    }
+
+    span.landing__desc {
+      font-size: 1.5em;
+    }
+  }
+
+  .qualities {
+
+    &__quality {
+      font-size: 1.5em;
+    }
+
+    &__quality:nth-of-type(1) {
+      margin-left: 0 !important;
+    }
+
+    &__quality:nth-last-of-type(2) {
+      font-size: 1.625em;
+      margin-left: 75px;
+      display: block;
+    }
+
+    &__quality:nth-of-type(3) {
+      margin-left: 25px;
+    }
+  }
+
+  .projects {
+
+    .project {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr 180px;
+
+      &__imgContainer img {
+        margin: 0;
+        width: 100%;
+        height: 400px;
+      }
+
+      &__desc {
+        font-size: 2.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      &__title {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .landing {
+    max-width: 20.625em !important;
+  }
+
+  .school {
+
+    &__establishment {
+      margin-left: 75px;
+    }
+
+    &__study {
+      margin-left: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
 
   .header {
 
@@ -616,6 +742,144 @@ $lightGrey: #F0F0F0;
 
     li:not(:last-of-type) {
       margin-bottom: 0.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .body {
+    &__container {
+      max-width: calc(100vw - 150px);
+
+    }
+  }
+
+  .header {
+
+    &__burger {
+      display: none;
+    }
+
+    .nav {
+
+      &__container {
+        display: flex;
+        align-items: center;
+
+        li:not(:last-of-type) {
+          margin-right: 10px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $grey;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+
+  .languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .code {
+      grid-column: span 2;
+    }
+
+    .code:nth-of-type(2n) {
+      grid-column: 2 / 4;
+    }
+
+    .code:nth-of-type(3n) {
+      grid-column: 3 / -1;
+    }
+  }
+
+  .form {
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+
+      .subject, .message, .form__actions, .rules {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    font-size: 1.5em;
+
+    &__container {
+
+    }
+  }
+
+  .landing {
+    max-width: 850px !important;
+
+    &__title {
+      font-size: 7em !important;
+    }
+
+    &__desc {
+      font-size: 3em !important;
+    }
+  }
+
+  .qualities {
+    max-width: 100%;
+
+    &__quality {
+      font-size: 3.5em;
+    }
+
+    &__quality:nth-of-type(2) {
+      font-size: 4.2em;
+    }
+  }
+
+  .school {
+    font-size: 1.5em;
+
+    &__establishment, &__study {
+      max-width: 400px !important;
+    }
+
+    &__study {
+
+    }
+  }
+
+  .languages {
+    font-size: 1.5em;
+
+    .code {
+      max-width: 400px;
+      grid-column: 1 / 3;
+    }
+
+    .code:nth-of-type(2n) {
+      grid-column: 2 / 4;
+    }
+
+    .code:nth-of-type(3n) {
+      grid-column: 3 / -1;
+    }
+  }
+
+  .contact {
+    font-size: 1.5em;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__title {
+      max-width: 800px;
     }
   }
 }

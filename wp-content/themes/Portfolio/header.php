@@ -20,7 +20,7 @@
 				<div class="header__logo">
 					<?= JMPortfolio_get_svg ( 'Logo' ) ?>
 				</div>
-				<div class="header__burger">
+				<div class="header__burger no-burger">
 					<?= JMPortfolio_get_svg ( 'burger' ) ?>
 				</div>
 				<div class="header__navigation menu">
@@ -31,7 +31,7 @@
 						<ul class="nav__container">
 							<li class="nav__item">
 								<a href="#about" title="Aller à la section À propos">
-									À propos
+									À&nbsp;propos
 								</a>
 							</li>
 							<li class="nav__item">

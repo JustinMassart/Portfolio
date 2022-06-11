@@ -21,6 +21,7 @@ const languages = document.querySelectorAll('.code');
 const contact = document.getElementById('contact');
 const schoolE = document.querySelector('.school__establishment');
 const schoolS = document.querySelector('.school__study');
+const burger = document.querySelector('.no-burger');
 
 // CHECK IF JS ENABLED
 
@@ -30,6 +31,7 @@ html.classList.add('js-enabled');
 // JS
 
 if (html.className === 'js-enabled') {
+    burger.classList.remove('no-burger');
     inputs.forEach(input => {
         input.children[2].classList.remove('form__placeholder-css');
         input.children[2].classList.add('form__placeholder');
