@@ -216,12 +216,12 @@
 			}
 
 			if ( in_array ( $key, $email, true ) && !filter_var ( $value, FILTER_VALIDATE_EMAIL ) ) {
-				$errors[ $key ] = 'L’email que vous avez rentré ne correspond pas au format normal. Par exemple : example@email.com';
+				$errors[ 'email' ] = 'L’email que vous avez rentré ne correspond pas au format normal. Par exemple : example@email.com';
 				continue;
 			}
 
 			if ( in_array ( $key, $accepted, true ) && $value !== '1' ) {
-				$errors[ $key ] = 'Merci d’accepter les conditions générales d’utilisation.';
+				$errors[ 'rules' ] = 'Merci d’accepter les conditions générales d’utilisation.';
 				continue;
 			}
 		}

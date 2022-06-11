@@ -34,7 +34,7 @@ $lightGrey: #F0F0F0;
 }
 
 .body:before {
-  background: -300px 100px / 500% url('../assets/mountains.png') no-repeat;
+  background: -18.75em 6.25em / 500% url('../assets/mountains.png') no-repeat;
   content: '';
   display: block;
   position: absolute;
@@ -50,14 +50,14 @@ $lightGrey: #F0F0F0;
 
 .header {
   max-width: 100%;
-  margin: 30px auto;
+  margin: 1.875em auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
   &__logo {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 9.375em;
+    max-height: 9.375em;
   }
 
   &__burger {
@@ -68,9 +68,9 @@ $lightGrey: #F0F0F0;
     z-index: 5;
 
     svg {
-      max-width: 50px;
-      max-height: 50px;
-      padding: 25px;
+      max-width: 3.125em;
+      max-height: 3.125em;
+      padding: 1.5625em;
     }
   }
 }
@@ -80,8 +80,8 @@ $lightGrey: #F0F0F0;
 .landing {
   margin: 0 auto 4.6875em; // 150px 75px
   font-family: $butlerM;
-  min-width: 300px;
-  max-width: 405px;
+  min-width: 18.75em;
+  max-width: 25.3125em;
   position: relative;
 
   .title {
@@ -89,14 +89,14 @@ $lightGrey: #F0F0F0;
     font-size: 3em; // 48px
     padding-bottom: 1.0416em; // 50px
     margin: 0 auto 0.5208em; // 25px
-    max-width: 225px;
+    max-width: 4.6875em;
 
     & span {
       display: inline-block;
     }
 
     &__firstname {
-      padding-bottom: 5px;
+      padding-bottom: 0.10416em;
     }
 
     &__lastname {
@@ -115,7 +115,7 @@ $lightGrey: #F0F0F0;
   font-family: $butlerR;
   font-size: 2em; // 32px
   margin: 0 auto 2.34375em; // 75px
-  max-width: 300px;
+  max-width: 9.375em;
 
   &__quality {
     display: block;
@@ -136,12 +136,12 @@ $lightGrey: #F0F0F0;
 // SECTION SCHOOL
 
 .school {
-  min-width: 300px;
-  max-width: 405px;
+  min-width: 18.75em;
+  max-width: 25.3125em;
   margin: 0 auto;
 
   &__title {
-    font-size: 18px;
+    font-size: 1.215em; // 18px
     color: black;
     display: inline-block;
     padding-bottom: 10px;
@@ -151,29 +151,29 @@ $lightGrey: #F0F0F0;
   &__name, &__years {
     font-family: $butlerR;
     color: $blue;
-    font-size: 24px;
+    font-size: 1.5em; // 24px
     text-transform: uppercase;
     display: block;
   }
 
   &__establishment {
-    margin-bottom: 50px;
+    margin-bottom: 3.125em;
   }
 
   &__establishment, &__study {
-    max-width: 250px;
+    max-width: 15.625em;
   }
 
   &__study {
     float: right;
-    margin-bottom: 75px;
+    margin-bottom: 4.6875em;
   }
 
   &__learning {
     font-family: $manropeR;
     color: $grey;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.125em; // 18px
+    line-height: 1.33333em;
   }
 
 }
@@ -181,12 +181,12 @@ $lightGrey: #F0F0F0;
 // SECTION PROJECTS
 
 .projects {
-  min-width: 300px;
-  max-width: 405px;
-  margin: 0 auto 75px;
+  min-width: 18.75em;
+  max-width: 25.3125em;
+  margin: 0 auto 4.6875em;
 
   & .project:not(:last-of-type) {
-    margin-bottom: 30px;
+    margin-bottom: 1.875em;
   }
 
   & .project {
@@ -200,15 +200,14 @@ $lightGrey: #F0F0F0;
       object-fit: contain;
       display: block;
       margin: 0 auto;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, .05);
+      box-shadow: 0 0.3125em 0.625em rgba(0, 0, 0, .05);
 
     }
 
-
     &__desc {
       font-family: $butlerM;
-      font-size: 30px;
-      padding: 20px;
+      font-size: 1.875em; // 30px
+      padding: 0.666666em;
     }
 
     & span {
@@ -231,23 +230,24 @@ $lightGrey: #F0F0F0;
 // SECTION LANGUAGES
 
 .languages {
-  min-width: 300px;
-  max-width: 405px;
+  min-width: 18.75em;
+  max-width: 25.3125em;
   margin: 0 auto;
   position: relative;
 
   .code {
 
     &__title {
-      font-size: 18px;
+      font-size: 1.125em; // 18px
       color: black;
       display: inline-block;
-      padding-bottom: 10px;
+      padding-bottom: 0.5555555555em;
       text-transform: uppercase;
     }
 
     &__desc {
-      font-size: 18px;
+      font-size: 1.125em; // 18px
+      line-height: 1.33333em;
       font-family: $manropeR;
 
       strong {
@@ -258,32 +258,32 @@ $lightGrey: #F0F0F0;
   }
 
   .code:not(:last-of-type) {
-    margin-bottom: 50px;
+    margin-bottom: 3.215em;
   }
 }
 
 .languages:before {
-  background: 0 100px / 100% 100% url('../assets/mountain-left.png') no-repeat;
+  background: 0 6.25em / 100% 100% url('../assets/mountain-left.png') no-repeat;
   content: '';
   display: block;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 300px;
+  height: 18.75em;
   z-index: -1;
   opacity: .2;
 }
 
 .languages:after {
-  background: 0 100px / 100% 100% url('../assets/mountain-right.png') no-repeat;
+  background: 0 6.25em / 100% 100% url('../assets/mountain-right.png') no-repeat;
   content: '';
   display: block;
   position: absolute;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 300px;
+  height: 18.75em;
   z-index: -1;
   opacity: .2;
 }
@@ -291,11 +291,11 @@ $lightGrey: #F0F0F0;
 // SECTION CONTACT
 
 .contact {
-  margin-top: 75px;
+  margin-top: 4.6875em;
 
   &__title {
     font-family: $butlerM;
-    font-size: 40px;
+    font-size: 2.5em; // 40px
     color: $blue;
 
     span {
@@ -309,12 +309,12 @@ $lightGrey: #F0F0F0;
   }
 
   .form {
-    max-width: 405px;
-    margin: 30px auto 0;
+    max-width: 25.3125em;
+    margin: 1.875em auto 0;
 
     &__field {
       max-width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 1.25em;
       position: relative;
     }
 
@@ -323,13 +323,13 @@ $lightGrey: #F0F0F0;
     }
 
     &__input, &__select {
-      min-height: 50px;
-      border-radius: 10px;
-      border: 1px solid rgba(0, 0, 0, .1);
+      font-size: 1.25em; // 20px
+      min-height: 2.5em;
+      border-radius: 0.4em;
+      border: 0.05em solid rgba(0, 0, 0, .1);
       display: block;
       width: 100%;
-      font-size: 20px;
-      padding-left: 10px;
+      padding-left: 0.4em;
       -ms-box-sizing: border-box;
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -341,8 +341,8 @@ $lightGrey: #F0F0F0;
     &__textarea {
       min-width: 100%;
       max-width: 100%;
-      min-height: 50px;
-      max-height: 1000px;
+      min-height: 2.5em;
+      max-height: 50em;
     }
 
     &__select {
@@ -357,22 +357,23 @@ $lightGrey: #F0F0F0;
       opacity: 0;
     }
 
-    &__placeholder {
+    &__placeholder-css {
       font-family: $manropeM;
-      font-size: 20px;
+      font-size: 1.25em; // 20px
       color: $grey;
       vertical-align: middle;
       position: absolute;
-      top: 15px;
-      left: 15px;
-      z-index: -1;
+      top: -0.5em;
+      left: 0.75em;
+      z-index: 5;
       transition: all .3s ease-in-out;
+      background-color: white;
     }
 
     &__placeholder-move {
-      font-size: 14px;
+      font-size: 0.875em; // 14px
       color: #7C7C7C;
-      top: -8px;
+      top: -0.5714em;
       background-color: white;
       z-index: 1;
     }
@@ -396,13 +397,14 @@ $lightGrey: #F0F0F0;
     }
 
     &__checker {
-      min-width: 20px;
-      min-height: 20px;
-      margin-right: 20px;
+      // 14px
+      min-width: 1.42857em;
+      min-height: 1.42857em;
+      margin-right: 1.42857em;
     }
 
     &__checklabel {
-      line-height: 20px;
+      line-height: 1.25em;
       color: $grey;
     }
 
@@ -411,15 +413,15 @@ $lightGrey: #F0F0F0;
     }
 
     &__button {
-      box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+      font-size: 1.125em; // 18px
+      box-shadow: 0 0.277777em 0.55555em rgba(0, 0, 0, .1);
       border: none;
-      border-radius: 10px;
-      font-size: 18px;
+      border-radius: 0.55555em;
       color: white;
       font-family: $manropeM;
       text-transform: uppercase;
       background-color: $blue;
-      padding: 15px 25px;
+      padding: 0.833333em 1.3888888em;
       transition: all 0.3s ease-in-out;
     }
 
@@ -430,8 +432,8 @@ $lightGrey: #F0F0F0;
     }
 
     &__errors {
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 1.25em; // 20px
+      line-height: 1.25em;
       font-family: $manropeM;
       color: darkred;
     }
@@ -439,11 +441,11 @@ $lightGrey: #F0F0F0;
     & .input {
 
       &__error {
+        font-size: 1em; // 16px
         display: inline-block;
         color: darkred;
-        font-size: 16px;
-        line-height: 20px;
-        margin-top: 10px;
+        line-height: 1.25em;
+        margin-top: 0.625em;
       }
     }
   }
@@ -452,9 +454,9 @@ $lightGrey: #F0F0F0;
 // FOOTER
 
 .footer {
-  min-height: 150px;
+  min-height: 9.375em;
   min-width: 100%;
-  margin-top: 100px;
+  margin-top: 6.25em;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, .03);
 
   a {
@@ -466,9 +468,9 @@ $lightGrey: #F0F0F0;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    margin: 0 25px 30px;
-    padding-top: 30px;
+    grid-gap: 1.25em;
+    margin: 0 1.5625em 1.875em;
+    padding-top: 1.875em;
   }
 
   &__socials {
@@ -480,14 +482,14 @@ $lightGrey: #F0F0F0;
     grid-column: span 2;
 
     a {
-      padding: 20px;
-      font-size: 14px;
+      font-size: 0.875em; // 14px
+      padding: 1.25em;
     }
   }
 
   &__logo {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 6.25em;
+    max-height: 6.25em;
   }
 
   .socials__list {
@@ -508,11 +510,33 @@ $lightGrey: #F0F0F0;
 }
 
 .border {
-  max-width: 40px;
-  min-height: 10px;
+  max-width: 2.5em;
+  min-height: 0.625em;
   background-color: $blue;
   border-radius: 1px;
-  margin-bottom: 30px;
+  margin-bottom: 1.875em;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.form__placeholder {
+  font-family: $manropeM;
+  font-size: 1.25em; // 20px
+  color: $grey;
+  vertical-align: middle;
+  position: absolute;
+  top: 0.75em;
+  left: 0.75em;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+  background-color: white;
 }
 
 @media screen and (min-width: 0) and (max-width: 500px) {
@@ -532,12 +556,12 @@ $lightGrey: #F0F0F0;
 
   .burger {
     cursor: pointer;
-    min-height: 30px;
-    min-width: 30px;
+    min-height: 1.875em;
+    min-width: 1.875em;
     overflow: visible;
     position: relative;
     z-index: 2;
-    padding: 25px;
+    padding: 1.5625em;
   }
 
   .close {
@@ -546,11 +570,11 @@ $lightGrey: #F0F0F0;
     }
 
     .top {
-      transform: translate(10px, 0) rotate(45deg);
+      transform: translate(0.625em, 0) rotate(45deg);
     }
 
     .middle {
-      transform: translate(-10px, 18px) rotate(-45deg);
+      transform: translate(-0.625em, 1.125em) rotate(-45deg);
     }
   }
 
@@ -566,23 +590,23 @@ $lightGrey: #F0F0F0;
     visibility: hidden;
     opacity: 0;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 1.25em;
     transition: all 0.3s ease-in-out;
 
     &.overlay {
       visibility: visible;
       opacity: 1;
-      padding-top: 100px;
+      padding-top: 6.25em;
       background-color: rgb(22, 65, 148);
     }
 
     ul {
-      margin-top: 150px;
+      margin-top: 9.375em;
     }
 
     li {
-      font-size: 40px;
-      padding: 15px;
+      font-size: 2.5em; // 40px
+      padding: 0.375em;
 
       a {
         color: white;
@@ -591,7 +615,7 @@ $lightGrey: #F0F0F0;
     }
 
     li:not(:last-of-type) {
-      margin-bottom: 20px;
+      margin-bottom: 0.5em;
     }
   }
 }
